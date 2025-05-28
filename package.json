@@ -1,0 +1,22 @@
+{
+  "name": "price-tracker-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Retail Price Tracker",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "serve": "http-server -p 8080",
+    "dev": "pnpm run watch & pnpm run serve"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@8.x"
+} 

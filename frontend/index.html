@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Shopkeepers: Price Tracker Tool</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <nav class="bg-white shadow fixed w-full z-10 top-0 left-0">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="font-bold text-xl text-blue-700">Price Tracker Tool</div>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#price-list" class="hover:text-blue-600">Price List</a></li>
+        <li><a href="#add-price" class="hover:text-blue-600">Add Price</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-24 pb-12 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');">
+    <div class="container mx-auto px-4 text-center text-white">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow">Compare & Track Supplier Prices Easily</h1>
+      <p class="text-lg md:text-xl mb-6 drop-shadow">Empowering shopkeepers to make smarter buying decisions for maize flour, rice, sugar, wheat flour, and cooking oil.</p>
+      <a href="#add-price" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded shadow transition">Add Your Price</a>
+    </div>
+  </section>
+
+  <!-- Search Bar -->
+  <section class="container mx-auto px-4 mt-8" id="price-list">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+      <h2 class="text-2xl font-semibold mb-4 md:mb-0">Current Product Prices</h2>
+      <input id="searchInput" type="text" placeholder="Search products..." class="w-full md:w-64 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    </div>
+    <!-- Product List -->
+    <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Add Product Form -->
+  <section id="add-price" class="container mx-auto px-4 mt-12 mb-16">
+    <div class="bg-white rounded shadow p-6 max-w-lg mx-auto">
+      <h2 class="text-xl font-semibold mb-4">Add New Price Entry</h2>
+      <form id="addProductForm" class="space-y-4">
+        <div>
+          <label class="block mb-1 font-medium">Product Name</label>
+          <input name="productName" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+        <div>
+          <label class="block mb-1 font-medium">Supplier Name</label>
+          <input name="supplierName" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+        <div>
+          <label class="block mb-1 font-medium">Price (KES)</label>
+          <input name="price" type="number" min="1" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded transition">Add Price</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-gray-200 py-8 mt-auto">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+      <div>
+        <h3 class="font-bold text-lg mb-2">Contact Us</h3>
+        <p>Email: <a href="mailto:support@price-tracker.co.ke" class="text-blue-400 hover:underline">support@price-tracker.co.ke</a></p>
+        <p>Phone: <a href="tel:+254712345678" class="text-blue-400 hover:underline">+254 712 345 678</a></p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Connect with us</h3>
+        <div class="flex space-x-4 text-2xl">
+          <a href="https://facebook.com/PriceTrackerKE" target="_blank" class="hover:text-blue-500" aria-label="Facebook">&#x1F426;</a>
+          <a href="https://twitter.com/PriceTrackerKE" target="_blank" class="hover:text-blue-400" aria-label="Twitter">&#x1F426;</a>
+          <a href="https://wa.me/254712345678" target="_blank" class="hover:text-green-400" aria-label="WhatsApp">&#x1F4F2;</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-gray-400 mt-6 text-sm">© 2025 Retail Price Tracker Tool. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html> 
